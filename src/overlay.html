@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rusty Shutters</title>
+  <link rel="stylesheet" href="overlay.css">
+  <!-- Google Font — loaded inline for offline fallback -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap');
+  </style>
+</head>
+<body>
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LAYER 0: Background Workspace (revealed behind the shutter)
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div id="workspace-bg" class="workspace-bg">
+    <div class="workspace-grid"></div>
+    <div class="workspace-glow"></div>
+    <div class="neon-lines">
+      <div class="neon-line neon-line-1"></div>
+      <div class="neon-line neon-line-2"></div>
+      <div class="neon-line neon-line-3"></div>
+      <div class="neon-line neon-line-4"></div>
+      <div class="neon-line neon-line-5"></div>
+    </div>
+    <!-- Floating particles in the workspace -->
+    <div class="workspace-particles" id="workspace-particles"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LAYER 1: The Rolling Shutter
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div id="shutter-container" class="shutter-container">
+    <!-- Top bar / header beam -->
+    <div class="shutter-header">
+      <div class="header-bolt left"></div>
+      <div class="header-label">RUSTY SHUTTERS™</div>
+      <div class="header-bolt right"></div>
+    </div>
+
+    <!-- Shutter slats -->
+    <div id="shutter-body" class="shutter-body">
+      <!-- Slats are generated dynamically via JS -->
+    </div>
+
+    <!-- Bottom handle bar -->
+    <div id="shutter-handle" class="shutter-handle">
+      <div class="handle-grip"></div>
+      <div class="handle-grip"></div>
+      <div class="handle-grip"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LAYER 2: Light leaks / sparks during opening
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div id="effects-layer" class="effects-layer">
+    <canvas id="sparks-canvas" class="sparks-canvas"></canvas>
+    <div id="light-leak" class="light-leak"></div>
+    <div id="dust-particles" class="dust-particles"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LAYER 3: Text overlay (appears after shutter opens)
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div id="text-overlay" class="text-overlay">
+    <div id="logo-container" class="logo-container">
+      <img id="custom-logo" class="custom-logo" src="" alt="" style="display:none;">
+    </div>
+    <div id="main-text" class="main-text">
+      <span class="text-char" style="--i:0">R</span>
+      <span class="text-char" style="--i:1">U</span>
+      <span class="text-char" style="--i:2">S</span>
+      <span class="text-char" style="--i:3">T</span>
+      <span class="text-char" style="--i:4">Y</span>
+      <span class="text-char space" style="--i:5"> </span>
+      <span class="text-char" style="--i:6">N</span>
+      <span class="text-char" style="--i:7">E</span>
+      <span class="text-char" style="--i:8">V</span>
+      <span class="text-char" style="--i:9">E</span>
+      <span class="text-char" style="--i:10">R</span>
+      <span class="text-char space" style="--i:11"> </span>
+      <span class="text-char" style="--i:12">S</span>
+      <span class="text-char" style="--i:13">T</span>
+      <span class="text-char" style="--i:14">O</span>
+      <span class="text-char" style="--i:15">P</span>
+    </div>
+    <div id="subtitle-text" class="subtitle-text">Today's Grind Begins</div>
+    <div id="time-display" class="time-display"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LAYER 4: Screen shake container (wraps everything)
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div id="screen-shake" class="screen-shake"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LAYER 5: Final fade-out overlay
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div id="fade-overlay" class="fade-overlay"></div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       AUDIO ELEMENTS
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <audio id="shutter-sound" preload="auto"></audio>
+  <audio id="ambient-sound" preload="auto" loop></audio>
+
+  <script src="overlay.js"></script>
+</body>
+</html>

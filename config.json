@@ -1,0 +1,77 @@
+{
+  "theme": "chai-tapri",
+  "animationSpeed": 1,
+  "displayText": "RUSTY NEVER STOP",
+  "subtitleText": "Today's Grind Begins",
+  "logoPath": "",
+  "enableSound": true,
+  "soundPack": "default",
+  "enableShake": true,
+  "enableSparks": true,
+  "enableDustParticles": true,
+  "enableLightLeaks": true,
+  "enableAmbientSound": false,
+  "autoLaunch": true,
+  "fadeOutDelay": 1500,
+  "shutterDuration": 3500,
+  "overlayOpacity": 1,
+  "randomQuotes": true,
+  "quotes": [
+    "RUSTY NEVER STOP",
+    "OFFICE HOURS STARTED",
+    "Today's Grind Begins",
+    "The Hustle is Real",
+    "System Online. Coffee Loading...",
+    "Booting Up The Empire",
+    "Another Day, Another Deploy",
+    "Code. Ship. Repeat.",
+    "Chai First, Code Later",
+    "The Machine Awakens"
+  ],
+  "themes": {
+    "chai-tapri": {
+      "name": "Chai Tapri Mode",
+      "description": "Warm lights, kettle steam, chai shop ambience",
+      "primaryColor": "#FF6B35",
+      "secondaryColor": "#F7C948",
+      "accentColor": "#E8451E",
+      "bgGlow": "#2D1B00",
+      "sparkColor": "#FFD700",
+      "neonColor": "#FF8C42",
+      "textGlow": "#FF6B35"
+    },
+    "mechanic-garage": {
+      "name": "Mechanic Garage Mode",
+      "description": "Industrial shutter, sparks, tool sounds",
+      "primaryColor": "#FF4500",
+      "secondaryColor": "#C0C0C0",
+      "accentColor": "#8B0000",
+      "bgGlow": "#1A1A2E",
+      "sparkColor": "#FFA500",
+      "neonColor": "#FF6347",
+      "textGlow": "#FF4500"
+    },
+    "cyber-cafe": {
+      "name": "Cyber Cafe Mode",
+      "description": "RGB lighting, retro CRT flicker, hacker aesthetic",
+      "primaryColor": "#00FF41",
+      "secondaryColor": "#0ABDC6",
+      "accentColor": "#EA00D9",
+      "bgGlow": "#0D0221",
+      "sparkColor": "#00FF41",
+      "neonColor": "#711C91",
+      "textGlow": "#0ABDC6"
+    },
+    "startup-office": {
+      "name": "Startup Office Mode",
+      "description": "Clean neon office, modern tech vibe",
+      "primaryColor": "#6C63FF",
+      "secondaryColor": "#F8F9FA",
+      "accentColor": "#FF6584",
+      "bgGlow": "#0F0E17",
+      "sparkColor": "#E8E8E8",
+      "neonColor": "#6C63FF",
+      "textGlow": "#A78BFA"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "rusty-shutters",
+  "version": "1.0.0",
+  "description": "Rusty Shutters — A cinematic Indian storefront startup overlay for Windows",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --win --x64",
+    "pack": "electron-builder --win --x64 --dir"
+  },
+  "keywords": [
+    "shutter",
+    "overlay",
+    "startup",
+    "animation",
+    "windows"
+  ],
+  "author": "Rusty Shutters Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "build": {
+    "appId": "com.rustyshutters.app",
+    "productName": "Rusty Shutters",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "config.json",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Rusty Shutters"
+    },
+    "extraResources": [
+      {
+        "from": "assets/",
+        "to": "assets/",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "config.json",
+        "to": "config.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "auto-launch": "^5.0.6",
+    "electron": "^36.9.5",
+    "electron-builder": "^26.0.12"
+  }
+}
